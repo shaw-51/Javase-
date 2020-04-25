@@ -1,6 +1,6 @@
 /*
 *多态练习
-*第16，21，33,39，47题
+*第21，33,39，47题
 *填空题第3题
 */
 
@@ -154,9 +154,7 @@ class Person{
 A．Person(n,a) B．this(Person(n,a))
 C．this(n,a)//调用的是第二个有参构造函数    D．this(name.age)
 
-C
-//不明白原因
-
+c
 22．请看下面的程序段
 class Test{
    private int m;
@@ -168,7 +166,7 @@ class Test{
 A．将private int m 改成protected int m    B．将private int m 改成public int m
 C．将private int m 改成static int m       D．将private int m 改成int m  
 
-A，B好像都可以
+C
 
 24.有一个类A，对于其构造函数的声明正确的是（ ）。
 A．void A(int x){…}  B．public A(int x){…}
@@ -336,7 +334,8 @@ C．编译错误：b.g(new ClassA())
 D．以上都不对
 
 A
-不明白为什么会直接执行classA里的f方法
+
+
 
 40、下列类的声明中不合法的是( )
 A．class People（）{…}
@@ -383,7 +382,7 @@ B．class Father implements Son
 C．class Father extends Son
 D．class Son extends Father 
 
-C
+D
 
 45、重载指的是方法具有相同的名字，但这些方法的参数必须不同。下列哪种说法不属于方法参数的不同( )
 A．形式参数的个数不同。
@@ -407,7 +406,7 @@ abstract class A{
   	public abstract void k();    
 }
 class B extends A{
-	protected void f(){    }
+	protected void f(){    }    //子类可以有自己的方法...   
 	void k(){           //访问权限修饰符  
 		System.out.print("I am subclass");
 }
@@ -423,12 +422,12 @@ C
 
 
 48、关于接口的定义和实现，以下描述正确的是( )
-A．接口定义的方法只有定义没有实现
+A．接口定义的方法只有定义没有实现       //目前
 B．接口定义中的变量都必须写明final和static
 C．如果一个接口由多个类来实现，则这些类在实现该接口中的方法时采用统一的代码
 D．如果一个类实现接口，则必须实现该接口中的所有方法，但方法未必申明为public
 
-A
+D
 
 49.char类型的整数范围是（ ）
 A. 0 ... 32767 
@@ -436,7 +435,7 @@ B. 0 ... 65535
 C. –256 ... 255 
 D. –32768 ... 32767
 
-C
+B
  
 50.以下程序正确的输出是（ ）
 public class FatherClass {
@@ -473,9 +472,11 @@ D.ChildClass Create
  A
  
  二、填空题
+ 
+ 
  1．如果一个方法不返回任何值，则该方法的返回值类型为( void )。
  2．如果子类中的某个方法名、返回值类型和( 形参列表 )与父类中的某个方法完全一致，则称子类中的这个方法覆盖了父类的同名方法。
- 3．接口中所有的属性均为(  )、(  )和(  )的
+ 3．接口中所有的属性均为(public  )、( static )和( final )的
  4．(  抽象方法 )方法是一种仅有方法声明，没有具体方法体和操作实现的方法，该方法必须在( 抽象 )类之中定义。
  5．在Java程序中，通过类的定义只能实现( 单重 )继承，但通过( 接口 )的定义可以实现多重继承关系。
  
@@ -490,7 +491,9 @@ D.ChildClass Create
  2、请简述重载和重写的区别？
  重载方法的返回值，方法名以及参数必须与父类方法完全一致
  重写方法的形参列表与父类方法不一致。
+ 
  3.抽象类和接口的区别
+ 
  抽象类中可以有非抽象方法，抽象方法，变量。
  接口中只能有抽象方法，常量（不一定要用final修饰，但必须初始化）
  抽象类只能单继承
